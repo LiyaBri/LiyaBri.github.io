@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  line-height: 1;
+  font-size: 14px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  background-color: #fbdfff;
+  height: auto;
+}
+
+.title {
+  height: 100vh;
+  font-family: sans-serif;
+  padding-top: 50px;
+}
+.title__title {
+  font-family: "Lobster";
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.title__desc {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+.title__inst {
+  font-size: 16px;
+  padding: 0 40px;
+  line-height: 1.4;
+}
+.title__inst li {
+  padding-bottom: 20px;
+  list-style: url("img/icon.png") !important;
+}
+
+h1 {
+  font-family: "Lobster";
+  font-size: 24px;
+  font-weight: semibold;
+  text-align: center;
+  padding-top: 20px;
+  display: none;
+}
+
+.cats {
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+  margin: 10px;
+}
+@media (max-width: 1270px) {
+  .card {
+    width: calc(80px + 220 * ((100vw - 320px) / 950));
+  }
+}
+@media (max-width: 1270px) {
+  .card {
+    height: calc(80px + 220 * ((100vw - 320px) / 950));
+  }
+}
+
+.img, .text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  background-color: #fff;
+  transform: rotateY(180deg);
+  font-family: "Lobster";
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-name: click;
+  animation-play-state: paused;
+  border: 20px solid #fff;
+}
+@media (max-width: 1270px) {
+  .text {
+    font-size: calc(16px + 12 * ((100vw - 320px) / 950));
+  }
+}
+
+.card:hover .text {
+  animation-play-state: running;
+}
+
+@keyframes click {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes click2 {
+  to {
+    transform: rotateY(0deg);
+  }
+}
