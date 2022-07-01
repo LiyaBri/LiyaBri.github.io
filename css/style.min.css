@@ -108,7 +108,7 @@ h1 {
   font-size: 24px;
   font-weight: semibold;
   text-align: center;
-  padding-top: 20px;
+  padding: 40px 0 20px 0;
 }
 
 .cats {
